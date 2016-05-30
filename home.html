@@ -1,0 +1,49 @@
+<form name="userRequestForm" ng-submit="userRequest(userRequestForm.$valid)" novalidate>
+<section>
+    Select Report Suite
+    <br>
+    <br>
+    <div>
+      <select ng-model='userRequestObject.report_suite' required>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    How to Generate List
+    <br>
+    <br>
+    <div>
+      <select ng-model='userRequestObject.participation_metric' required>
+        <option value="participation_metric">Participation Metric</option>
+        <option value="entry_pages">Entry Pages</option>
+        <option value="variable_value_segment">Variable + Value with Segment</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    How many URLs do you want?
+    <br>
+    <br>
+    <div>
+      <input
+        type="number"
+        placeholder="Number of URLs"
+        ng-model="userRequestObject.url_num"
+        min="1"
+        max="500"
+        required>
+    </div>
+  </section>
+  <section>
+    <button type="submit" ng-disabled="userRequestForm.$invalid"><p>Go</p></button>
+  </section>
+</form>
+
+
+
+
